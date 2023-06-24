@@ -1,7 +1,7 @@
 "use client";
 import Button from "@/components/component-helpers/button";
 import Input from "@/components/component-helpers/input";
-import Sidebar from "@/components/layout/Sidebar";
+import Layout from "@/components/layout/Layout";
 import { ChangeEvent } from "react";
 
 export default function Home() {
@@ -14,9 +14,8 @@ export default function Home() {
   }
 
   return (
-    <main className="container">
-      <Sidebar />
-      <form action="">
+    <Layout>
+      {/* <form action="">
         <Input
           type="text"
           eventInput={handleClick}
@@ -42,7 +41,7 @@ export default function Home() {
         <Button type="button" text="Click me" callback={handelButton} itemAction="button" >
             <div className="s">s</div>
         </Button>
-      </form>
-    </main>
+      </form> */}
+    </Layout>
   );
 }

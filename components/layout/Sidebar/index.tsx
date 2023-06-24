@@ -1,11 +1,11 @@
 "use client"
 import classNames from 'classnames';
-import React, { useState, useMemo } from 'react';
+import React, { useState, useMemo, Fragment } from 'react';
 import { useRouter } from 'next/navigation';
 // import Link from 'next/link';
 
 // Image
-import Logo from '@/image/Cisco-logo.png'
+import Logo from '../image/Cisco-logo.png';
 import Image from 'next/image';
 
 // Icons
@@ -30,27 +30,51 @@ interface Menu {
 }
 
 interface MenuItem {
-    id: number
-    link: string;
+    id: number;
+    name: string
+    menus: string[];
     route: string;
     icon: any
 }
 
 // Routes Sidabar
 const menuItems: MenuItem[] = [
-    // { id: 1, route: "Home", icon: <Panal />, link: "/Home" },
-    { id: 1, route: "Home1", icon: <Cash />, link: "/Home1" },
-    { id: 2, route: "Home2", icon: <Bills />, link: "/Home2" },
-    { id: 3, route: "Home3", icon: <Storage />, link: "/Home3" },
-    { id: 4, route: "Home4", icon: <Requests />, link: "/Home4" },
-    { id: 5, route: "Home5", icon: <Client />, link: "/Home5" },
-    { id: 6, route: "Home6", icon: <Client />, link: "/Home6" },
-    { id: 7, route: "Home7", icon: <Report />, link: "/Home7" },
-    { id: 8, route: "Home8", icon: <Ranches />, link: "/Home8" },
-    { id: 9, route: "Home9", icon: <Employe />, link: "/Home9" },
-    { id: 10, route: "Home10", icon: <Units />, link: "/Home10" },
-    { id: 11, route: "Home12", icon: <Settings />, link: "/Home11" },
-    { id: 12, route: "Home13", icon: <Notification />, link: "/Home12" },
+    { id: 1, name:'navItem1', route: "Home1", icon: <Cash />,
+        menus: ["dashboard", "realtime", "events"],
+    },
+    { id: 2, name:'navItem2', route: "Home2", icon: <Bills />,
+        menus: ["dashboard", "realtime", "events"],
+    },
+    { id: 3, name:'navItem3', route: "Home3", icon: <Storage />,
+        menus: ["dashboard", "realtime", "events"],
+    },
+    { id: 4, name:'navItem4', route: "Home4", icon: <Requests />,
+        menus: ["dashboard", "realtime", "events"],
+    },
+    { id: 5, name:'navItem5', route: "Home5", icon: <Client />,
+        menus: ["dashboard", "realtime", "events"],
+    },
+    { id: 6, name:'navItem6', route: "Home6", icon: <Client />,
+        menus: ["dashboard", "realtime", "events"],
+    },
+    { id: 7, name:'navItem7', route: "Home7", icon: <Report />,
+        menus: ["dashboard", "realtime", "events"],
+    },
+    { id: 8, name:'navItem8', route: "Home8", icon: <Ranches />,
+        menus: ["dashboard", "realtime", "events"],
+    },
+    { id: 9, name:'navItem9', route: "Home9", icon: <Employe />,
+        menus: ["dashboard", "realtime", "events"],
+    },
+    { id: 10, name:'navItem10', route: "Home10", icon: <Units />,
+        menus: ["dashboard", "realtime", "events"],
+    },
+    { id: 11, name:'navItem11', route: "Home12", icon: <Settings />,
+        menus: ["dashboard", "realtime", "events"],
+    },
+    { id: 12, name:'navItem12', route: "Home13", icon: <Notification />,
+        menus: ["dashboard", "realtime", "events"],
+    },
 ];
 
 const Sidebar = () => {
@@ -58,25 +82,25 @@ const Sidebar = () => {
     const router = useRouter();
 
     const [toggleCollapse, setToggleCollapse] = useState<boolean>(false)
-    // const [ isCollapse , setIsCollapse ] = useState<boolean>(false)
+    const [ nameCollapse, setnameCollapse ] = useState<string>('navItem1')
 
     // const activeMenu = useMemo(
     //     () => menuItems.find((menu) => menu.link === router.pathname),
     //     [router.pathname]
     // );
 
-    // const wrapperClasses = classNames(
-    //     `h-screen p-4 pt-8 pb-4 bg-Denim text-white flex justify-between flex-col ${toggleCollapse?"w-1":"w-80"}`,
-    //     // {
-    //     //     ['w-full']: !toggleCollapse,
-    //     //     ['w-[20px]']: toggleCollapse,
-    //     // }
-    // );
+    const wrapperClasses = classNames(
+        'py-8 pb-4 bg-Denim text-white fixed h-screen overflow-outo',
+        {
+            ['w-[360px]']: !toggleCollapse,
+            ['w-[80px]']: toggleCollapse,
+        }
+    );
 
     const collapseIconClasses = classNames(
-        "absolute",
+        "absolute right-0 top-0 rotate-180",
         {
-            "rotate-180": toggleCollapse,
+            "rotate-0": toggleCollapse,
         }
     );
 
@@ -89,25 +113,21 @@ const Sidebar = () => {
         );
     };
 
-    // const onMouseOver = () => {
-    //     setIsCollapse(!isCollapse);
-    // };
-
     const handleSidebarToggle = () => {
         setToggleCollapse(!toggleCollapse);
     };
 
+    const handleCollapseToggle = (name: string) => {
+        setnameCollapse(name);
+    };
+
     return (
-        <div
-            className={`h-screen p-4 pt-8 pb-4 bg-Denim text-white flex justify-between flex-col ${toggleCollapse?"w-[80px]":"w-[350px]"}`}
-        // onMouseEnter={onMouseOver}
-        // onMouseLeave={onMouseOver}
-        // style={{ transition: "width 300ms cubic-bezier(0.2, 0, 0, 1) 0s" }}
-        >
+        <div className={wrapperClasses}>
             <div className="flex flex-col">
                 <div className="flex items-center justify-between relative">
+                    <button className={collapseIconClasses} onClick={handleSidebarToggle}> <Arrow /> </button>
                     <div className="flex item-center w-40 mx-auto mb-5 text-xl font-bold">
-                        {/* <Image src={Logo} alt='Logo' /> */}
+                        <Image src={Logo} alt='Logo' />
                         {/* <span
                                 className={classNames("mt-2 text-lg font-medium text-text", {
                                     hidden: toggleCollapse,
@@ -116,40 +136,55 @@ const Sidebar = () => {
                                 Logo
                             </span> */}
                     </div>
-                    <button className={collapseIconClasses} onClick={handleSidebarToggle}> <Arrow /> </button>
                 </div>
 
-                <div className="bg-white text-Denim flex py-4">
-                    <Panal />
-                    <span>
-                        ddd
-                    </span>
+                <div className="bg-white text-Denim flex items-center flex-row py-4 px-4">
+                    <div style={{ width: "2.5rem" }}>
+                        <Panal />
+                    </div>
+                    {!toggleCollapse && (
+                        <span className='w-full px-4 flex-row'>
+                            ddd
+                        </span>
+                    )}
                 </div>
 
-                <div className="flex flex-col items-start mt-24">
+                <div className="flex flex-col items-start">
                     {
                         menuItems.map(({ icon: Icon, ...menu }) => {
                             const classes = getNavItemClasses(menu);
                             return (
-                                <div key={menu.id} className={classes}>
-                                    {/* <Link href={menu.link}> */}
-                                        <div className="flex py-4 px-4 items-center flex-row w-full h-full">
-                                            <div style={{ width: "2.5rem" }}>
-                                                {Icon}
+                                <Fragment key={menu.id}>
+                                    <div className={classes} onClick={() => handleCollapseToggle(menu.name)}>
+                                        {/* <Link href={menu.link}> */}
+                                            <div className="flex py-4 px-4 items-center flex-row w-full h-full">
+                                                <div style={{ width: "2.5rem" }}>
+                                                    {Icon}
+                                                </div>
+                                                {!toggleCollapse && (
+                                                    <>
+                                                        <span className={classNames(
+                                                                "text-xl font-medium text-text-light flex items-center justify-between w-full px-4 flex-row"
+                                                            )}>
+                                                            {menu.route}
+                                                            <span className={`transition-all ${nameCollapse === menu?.name? 'rotate-0' : 'rotate-180'}`}>
+                                                                <FaAngleUp />
+                                                            </span>
+                                                        </span>
+                                                    </>
+                                                )}
                                             </div>
-                                            {!toggleCollapse && (
-                                                <span
-                                                    className={classNames(
-                                                        "text-md font-medium text-text-light flex items-center justify-between w-full px-4 flex-row"
-                                                    )}
-                                                >
-                                                    {menu.route}
-                                                    <FaAngleUp />
-                                                </span>
-                                            )}
-                                        </div>
-                                    {/* </Link> */}
-                                </div>
+                                        {/* </Link> */}
+                                    </div>
+                                    <ul className={`px-5 flex-flex-col transition-all ${nameCollapse === menu?.name? 'block' : 'hidden'}`}>
+                                        {menu.menus.map(item => {
+                                        return (
+                                                <li className='py-1 text-lg'>{item}</li>
+                                            )
+                                        } 
+                                        )}
+                                    </ul>
+                                </Fragment>
                             )
                         })
                     }
