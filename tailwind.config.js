@@ -67,6 +67,8 @@ module.exports = {
         },
       },
       colors: {
+          'Gainsboro': '#D9D9D9',
+          'Denim': '#1664B8',
         ib: {
           25: "#D0DFE5",
           50: "#A1B1C0",
@@ -79,6 +81,7 @@ module.exports = {
           700: "#0C2945",
           800: "#0A1C37",
         },
+        borderInput:"#D3D3D3",
         s: {
           error: "#F24B4B",
           success: "#5BC69A",

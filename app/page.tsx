@@ -1,15 +1,21 @@
 "use client";
+import Button from "@/components/component-helpers/button";
 import Input from "@/components/component-helpers/input";
+import Sidebar from "@/components/layout/Sidebar";
 import { ChangeEvent } from "react";
 
 export default function Home() {
   const handleClick = (event: ChangeEvent<HTMLInputElement>) => {
-    console.log("element clicked", event.target);
+    console.log("element clicked", event.target.value);
   };
 
+  const handelButton = () => {
+    console.log("dddss")
+  }
+
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      بسم الله الرحمن الرحيم
+    <main className="container">
+      <Sidebar />
       <form action="">
         <Input
           type="text"
@@ -33,6 +39,9 @@ export default function Home() {
             />
           </svg>
         </Input>
+        <Button type="button" text="Click me" callback={handelButton} itemAction="button" >
+            <div className="s">s</div>
+        </Button>
       </form>
     </main>
   );
