@@ -28,23 +28,33 @@ const Input: FunctionComponent<InputProps> = ({
   };
 
   return (
-    <div className="relative w-full">
-      {label && <label htmlFor={name}>{label}</label>}
-      <input
-        className={`h-[38px] border rounded-8 px-4 ${
-          placeIcon === "start" ? "ps-[30px]" : "pe-[30px]"
-        }`}
-        type={type}
-        placeholder={placeholder}
-        name={name}
-        onChange={handleChange}
-      />
-      {children && (
-        <span className={`${placeIcon === "start" ? "end-0" : "start-0"}`}>
-          {children}
-        </span>
-      )}
-      {error && <span>{error}</span>}
+    <div className="mb-4">
+      <div className="relative w-full">
+        {label && (
+          <label className="text-colerText text-lg block mb-1" htmlFor={name}>
+            {label}
+          </label>
+        )}
+        <input
+          className={`h-[42px] w-full border rounded-[10px] placeholder:text-[#7E8DA0] outline-none px-4 ${
+            placeIcon === "start" ? "ps-[40px]" : "pe-[40px]"
+          }`}
+          type={type}
+          placeholder={placeholder}
+          name={name}
+          onChange={handleChange}
+        />
+        {children && (
+          <span
+            className={`${
+              placeIcon === "start" ? "start-[10px]" : "end-[10px]"
+            } absolute bottom-[8px]`}
+          >
+            {children}
+          </span>
+        )}
+      </div>
+        {error && <span className="text-s-error ps-1 text-sm">{error}</span>}
     </div>
   );
 };

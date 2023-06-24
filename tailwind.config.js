@@ -69,6 +69,8 @@ module.exports = {
       colors: {
           'Gainsboro': '#D9D9D9',
           'Denim': '#1664B8',
+          "colerText":"#111827",
+          ...scheme_colors.scheme1,
         ib: {
           25: "#D0DFE5",
           50: "#A1B1C0",
@@ -100,6 +102,7 @@ module.exports = {
         low: "0 0 10px 0 rgba(238, 242, 243, 0.7)",
         input: "0px 7px 10px rgba(41, 38, 50, 0.03)",
 
+        table:"0px 0px 0px 1px #BFBFBF",
         popup: "0px 7px 42px 4px rgba(8, 71, 87, 0.1)",
         form: "0px 7px 42px 4px rgba(8, 71, 87, 0.1);",
       },
