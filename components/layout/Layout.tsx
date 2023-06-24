@@ -1,14 +1,23 @@
-import React, { ReactNode } from 'react'
+"use client";
+import React, { ReactNode, useEffect, useState } from 'react'
 import Sidebar from './Sidebar/index';
 
 type LayoutProps = {
     children: ReactNode;
 };
 
+
+
 const Layout = ({ children }: LayoutProps) => {
+
+    const [openNav , setOpenNav] = useState<string | null>("open")
+    const handelWidthNavASidebar = (ststusSide:string) => {
+        console.log("ststusSide", ststusSide)
+        setOpenNav(ststusSide)
+    }
     return (
-        <div className='flex flex-row justify-start'>
-            <Sidebar />
+        <div className={`flex flex-row justify-start ${openNav === "open" ?"ps-[320px]":"ps-[80px]" } `}>
+            <Sidebar stateNavASidebar={handelWidthNavASidebar} />
             <div className='container'>{ children }</div>
         </div>
     )

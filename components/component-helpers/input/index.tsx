@@ -36,7 +36,7 @@ const Input: FunctionComponent<InputProps> = ({
           </label>
         )}
         <input
-          className={`h-[42px] w-full border rounded-[10px] placeholder:text-[#7E8DA0] outline-none px-4 ${
+          className={`h-[44px] w-full border rounded-[10px] placeholder:text-[#7E8DA0] outline-none px-4 ${
             placeIcon === "start" ? "ps-[40px]" : "pe-[40px]"
           }`}
           type={type}
@@ -48,7 +48,7 @@ const Input: FunctionComponent<InputProps> = ({
           <span
             className={`${
               placeIcon === "start" ? "start-[10px]" : "end-[10px]"
-            } absolute bottom-[8px]`}
+            } absolute bottom-[12px]`}
           >
             {children}
           </span>

@@ -20,6 +20,8 @@ const ReferenceUI = () => {
   return (
     <>
       <form action="">
+        {/* input */}
+
         <Input
           type="text"
           eventInput={handleClick}
@@ -42,11 +44,16 @@ const ReferenceUI = () => {
             />
           </svg>
         </Input>
+
+        {/* select */}
+
         <Select
           name="select"
           placeholder="select placeholder"
           eventSelect={handelSelect}
         />
+
+        {/* button */}
 
         <Button
           type="button"
@@ -87,6 +94,9 @@ const ReferenceUI = () => {
             />
           </svg>
         </Button>
+
+        {/* table */}
+
         <Table>
           <>
             <th>الرقم</th>
