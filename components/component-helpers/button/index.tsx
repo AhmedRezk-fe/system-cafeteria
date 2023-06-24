@@ -18,12 +18,13 @@ const Button = ({
   return (
     <div className="button">
       <button className={`${
-        itemAction === "button" ? "bg-gray-950":
-        itemAction === "add" ? "bg-[#00f]" :
-        itemAction === "delete" ? "bg-[#f00]":"" }
-        ${itemAction ? "text-white" :"text-gray-950"}
+        itemAction === "button" ? "bg-25":
+        itemAction === "add" ? "bg-[#3D9635] border-[#3D9635] " :
+        itemAction === "delete" ? "bg-s-error border-s-error ":"" }
+        ${itemAction ? "text-white" :"text-25"}
+        border-25 rounded-[10px] flex items-center justify-center border min-w-[170px] h-[42px]
         `} type={type} onClick={callback}>
-        {children && <span className="">{children}</span>}
+        {children && <span className="me-1">{children}</span>}
         {text}
       </button>
     </div>
