@@ -37,7 +37,7 @@ const Input: FunctionComponent<InputProps> = ({
         )}
         <input
           className={`h-[44px] w-full border rounded-[10px] placeholder:text-[#7E8DA0] outline-none px-4 ${
-            placeIcon === "start" ? "ps-[40px]" : "pe-[40px]"
+            children && placeIcon === "start" ? "ps-[40px]" : "pe-[40px]"
           }`}
           type={type}
           placeholder={placeholder}

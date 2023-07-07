@@ -1,14 +1,36 @@
-import Image from "next/image";
+"use client"
+import { ChangeEvent, FormEvent, useState } from "react";
+// import Image from "next/image";
 // import Logo from '../../image/Cisco-logo.png'
+import axios from "axios";
+import useSWR from "swr"
 
 export default function Home() {
+  const [datauser , setDatauser] = useState({})
+
+  const URL = process.env.API_URL;
+  axios.defaults.baseURL = URL
+  const submitDataUser = async (e:FormEvent<HTMLFormElement>)=>{
+    e.preventDefault();
+      const res = await axios.post("https://cafe.highdam-sk.com/api/login",datauser )
+      console.log(res)
+  }
+  const {data , error } = useSWR("/login" , url => {
+    return axios.post(url,datauser).then(r => r.data)
+  })
+
+  const handelInput = (e:ChangeEvent<HTMLInputElement>)=>{
+    
+    setDatauser({...datauser , [e.target.name]:e.target.value})
+  }
+
   return (
     <section className="flex items-center justify-center  bg-Gainsboro h-screen">
       <div className="text-center mx-auto bg-white rounded-lg p-16 max-w-[698px] w-full">
         <div className="w-40 mx-auto mb-5">
           {/* <Image src={Logo} alt='Logo' /> */}
         </div>
-        <form>
+        <form onSubmit={submitDataUser}>
           <h2 className="mb-5 text-2xl font-bold">تسجيل الدخول</h2>
           <div className="flex flex-col">
             <div className="mb-5">
@@ -16,6 +38,7 @@ export default function Home() {
                 type="text"
                 name="phone"
                 placeholder="phone"
+                onChange={handelInput}
                 className="bg-white border border-borderInpur text-gray-900 text-sm rounded-8 h-[44px] focus:ring-Denim focus:border-Denim block w-full  px-2.5  outline-none"
               />
             </div>
@@ -23,8 +46,9 @@ export default function Home() {
             <div className="mb-5">
               <input
                 type="password"
-                name="phone"
+                name="password"
                 placeholder="password"
+                onChange={handelInput}
                 className="bg-white border border-borderInpur text-gray-900 text-sm rounded-8 h-[44px] focus:ring-Denim focus:border-Denim block w-full  px-2.5  outline-none"
               />
             </div>
