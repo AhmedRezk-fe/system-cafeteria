@@ -59,7 +59,7 @@ const ReferenceUI = () => {
           type="button"
           text="Click me"
           callback={handelButton}
-          itemAction="button"
+          // itemAction="button"
         >
           <svg
             width="20"
