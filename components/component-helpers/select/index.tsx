@@ -64,16 +64,16 @@ const Select: FunctionComponent<SelectProps> = ({
   }, [data]);
 
   return (
-    <div className="relative w-full mb-4">
+    <div className="relative w-full ">
       {label && (
         <label className="text-colerText text-lg block mb-1" htmlFor={name}>
           {label}
         </label>
       )}
       <select name={name}
-      className={`h-[42px] bg-transparent w-full border rounded-[10px] placeholder:text-[#7E8DA0] outline-none px-4 `}
+      className={`h-[44px] bg-transparent w-full border rounded-[10px] placeholder:text-[#7E8DA0] outline-none px-4 `}
       onChange={handleChange}>
-        <option value={placeholder}>{placeholder}</option>
+        <option value={placeholder} disabled>{placeholder}</option>
         {dataOptiob?.map((option) => {
           return (
             <option key={option.id} value={option.value}>

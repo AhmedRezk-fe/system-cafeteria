@@ -50,3 +50,7 @@ table td , table th {
 table th{
   text-align: start;
 }
+
+.svgCss svg , .svgCss svg path {
+  fill : #fff !important
+}

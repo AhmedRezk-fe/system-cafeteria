@@ -55,6 +55,8 @@ const NewVault = () => {
           </Button>
         </div> */}
         </div>
+        <div className="mb-[15px]">
+
         <Input
           type="text"
           eventInput={handleClick}
@@ -63,6 +65,9 @@ const NewVault = () => {
           label="الكود"
           placeIcon="start"
         />
+        </div>
+        <div className="mb-[15px]">
+
         <Input
           type="text"
           eventInput={handleClick}
@@ -71,6 +76,7 @@ const NewVault = () => {
           label="اسم المخزن"
           placeIcon="start"
         />
+        </div>
 
 <div className="flex gap-4 mt-8">
 

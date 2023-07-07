@@ -7,11 +7,10 @@ import React, {
 } from "react";
 
 type TableProps = {
-  children?: JSX.Element;
   data?: any;
 };
 
-const Table: FunctionComponent<TableProps> = ({ children, data }) => {
+const BodyTable: FunctionComponent<TableProps> = ({  data }) => {
   const iniData = [
     {
       id: 1,
@@ -45,7 +44,13 @@ const Table: FunctionComponent<TableProps> = ({ children, data }) => {
   return (
     <table className="shadow-table overflow-hidden rounded-8">
       <thead>
-        <tr className="bg-200 text-100">{children}</tr>
+        <tr className="bg-200 text-100">
+        <th>الرقم</th>
+            <th>الكود</th>
+            <th>اسم المجموعة</th>
+            <th>عدد أصناف البيع</th>
+            <th>التحكم</th>
+        </tr>
       </thead>
       <tbody>
         <tr>
@@ -127,4 +132,4 @@ const Table: FunctionComponent<TableProps> = ({ children, data }) => {
   );
 };
 
-export default Table;
+export default BodyTable;

@@ -70,7 +70,7 @@ module.exports = {
           'Gainsboro': '#D9D9D9',
           'Denim': '#1664B8',
           "colerText":"#111827",
-          ...scheme_colors.scheme1,
+          ...scheme_colors.scheme2,
         ib: {
           25: "#D0DFE5",
           50: "#A1B1C0",

@@ -137,7 +137,8 @@ const Sidebar = ({ stateNavASidebar, navBar }: { stateNavASidebar?: (ss: string)
         {
             ["w-[320px]"]: !toggleCollapse,
             ["w-[80px]"]: toggleCollapse,
-        }
+        },
+        
     );
 
     const navbarClass = classNames (
@@ -207,19 +208,19 @@ const Sidebar = ({ stateNavASidebar, navBar }: { stateNavASidebar?: (ss: string)
 
                 
 
-                <div className={`${!navBar? "flex flex-col items-start": "flex flex-row" }`}>
+                <div className={`${!navBar? "flex flex-col items-start": "flex flex-row overflow-hidden " }`}>
                     {menuItems.map(({ icon: Icon, ...menu }) => {
                         const classes = getNavItemClasses(menu);
                         return (
                             <Fragment key={menu.id}>
                                 <div className=" w-full border-b border-opacity-[.5] border-300">
                                     <div
-                                        className={`${classes}`}
+                                        className={`${classes} ${navBar ? "relative ":""}`}
                                         onClick={() => handleCollapseToggle(menu.name)}
                                     >
                                         {/* <Link href={menu.link}> */}
                                         <div className="flex py-4 px-4 items-center flex-row w-full h-full">
-                                            <div style={{ width: "2.5rem" }}>{Icon}</div>
+                                            <div className={`${!navBar? "": "svgCss" }`} style={{ width: "2.5rem" }}>{Icon}</div>
                                             {!toggleCollapse && (
                                                 <>
                                                     <span
@@ -243,7 +244,7 @@ const Sidebar = ({ stateNavASidebar, navBar }: { stateNavASidebar?: (ss: string)
                                         {/* </Link> */}
                                     </div>
                                     <ul
-                                        className={`px-5 flex-flex-col transition-all ${nameCollapse === menu?.name ? "block" : "hidden"
+                                        className={`px-5 flex-flex-col transition-all ${navBar ? "absolute w-full bg-200 ":""} ${nameCollapse === menu?.name ? "block" : "hidden"
                                             }`}
                                     >
                                         {menu.menus.map((item) => {

@@ -28,7 +28,7 @@ const Input: FunctionComponent<InputProps> = ({
   };
 
   return (
-    <div className="mb-4">
+    <>
       <div className="relative w-full">
         {label && (
           <label className="text-colerText text-lg block mb-1" htmlFor={name}>
@@ -55,7 +55,7 @@ const Input: FunctionComponent<InputProps> = ({
         )}
       </div>
         {error && <span className="text-s-error ps-1 text-sm">{error}</span>}
-    </div>
+    </>
   );
 };
 
