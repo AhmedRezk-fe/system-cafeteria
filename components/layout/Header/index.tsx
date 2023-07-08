@@ -16,7 +16,7 @@ const index = () => {
 
     return (
         <>
-            <div className='flex justify-between py-5'>
+            <div className='flex justify-between py-5 px-6'>
                 <form className='w-[350px]'>
                     <Input
                         type="text"

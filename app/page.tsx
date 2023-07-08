@@ -6,16 +6,7 @@ import { getRequest } from "@/Api/Api";
 import { useEffect } from "react";
 
 export default function Home() {
-  const gitData = ()=> {
-    const { data, error, isLoading } = useSWR(`/warehouses`, getRequest)
- 
-    return {
-      user: data,
-      isLoading,
-      isError: error
-    }
-  }
-  console.log(gitData())
+
   return (
     // <SWRConfig>
       <Layout>

@@ -2,11 +2,12 @@ import React, { ChangeEvent, FunctionComponent } from "react";
 
 type InputProps = {
   type: string;
-  placeholder: string;
+  placeholder?: string;
   name: string;
   error?: string;
   label?: string;
   placeIcon?: string;
+  file?: any;
   eventInput?: (event: ChangeEvent<HTMLInputElement>) => void;
   children?: JSX.Element;
 };
@@ -20,6 +21,7 @@ const Input: FunctionComponent<InputProps> = ({
   eventInput,
   placeIcon,
   children,
+  file,
 }) => {
   const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
     if (eventInput) {
