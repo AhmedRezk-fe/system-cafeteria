@@ -1,43 +1,51 @@
 import axios from "axios";
-
+// ${process.env.API_URL}
 export const httpClient = axios.create({
-  baseURL: `${process.env.API_URL}`,
+  baseURL: 'https://cafe.highdam-sk.com/api',
   headers: {
     "Content-Type": "application/json",
     // Authorization: "Bearer 354|vM4wARtmLuqkTgy36aPFXl5E8xzxqOGEvvkciXQa",
   },
 });
 
-// export async function fetchQuitions() {
-//   const response = await httpClient.get(
-//     `${process.env.NEXT_PUBLIC_API_BASE_URL}/api/franchise-questions`
-//   );
-//   return response.data;
-// }
+export const getRequest =async (http : string) => {
+  const response =  await httpClient.get(`${http}`)
+  return response.data
+}
+export const postRequest =async (http : string , data : any ,formData:string ) => {
+try{
+  const response =  await httpClient.post(`/${http}` , data,
+  {
+    headers: {
+    "Content-Type": formData ? "multipart/form-data":"application/json",
+    },
+  }
+)
+return response.data
+}
 
+  catch (error) {
+    throw new Error("An error occurred while uploading the form data.");
+  }
+}
+export const putRequest =async (http : string, id : number ,formData:string, data?:any) => {
+  try{
 
-// export async function postFranchises(data: any) {
-//   const response = await httpClient.post(
-//     `${process.env.NEXT_PUBLIC_API_BASE_URL}/api/franchises`,
-//     data,
-//     {
-//       headers: {
-//         "Content-Type": "multipart/form-data",
-//       },
-//     }
-//   );
-//   return response.data;
-// }
+    const response =  await httpClient.put(`/${http}/${id}` , data,
+      {
+        headers: {
+        "Content-Type": formData ? "multipart/form-data":"application/json",
+        },
+      }
+    )
+  
+    return response.data
+  } catch (error) {
+      throw new Error("An error occurred while uploading the form data.");
+    }
 
-// export const uploadFormData = async (formData: FormData) => {
-//   try {
-//     const response = await httpClient.post(
-//       `${process.env.NEXT_PUBLIC_API_BASE_URL}/api/franchises`,
-//       formData
-//     );
-//     return response.data;
-//   } catch (error) {
-//     throw new Error("An error occurred while uploading the form data.");
-//   }
-// };
-
+}
+export const deleteRequest =async (http : string, id : number) => {
+  const response =  await httpClient.delete(`/${http}/${id}`)
+  return response.data
+}
