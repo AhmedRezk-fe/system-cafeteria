@@ -156,7 +156,7 @@ const SalesItemGroups = () => {
               </Input>
             </div>
             <div className="w-auto min-w-[200px]">
-              <Select placeholder="كل الاقسام" name="categories" />
+              <input type="date" className="outline-none cursor-default" />
             </div>
           </div>
         </>
