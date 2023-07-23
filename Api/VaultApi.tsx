@@ -8,3 +8,12 @@ export const gitStores = ()=> {
       isError: error
     }
   }
+
+  // export const deleteStores = (id:number)=> {
+  //   const { data, error, isLoading } = useSWR(`/warehouses`, )
+  //   return {
+  //     user: data,
+  //     isLoading,
+  //     isError: error
+  //   }
+  // }

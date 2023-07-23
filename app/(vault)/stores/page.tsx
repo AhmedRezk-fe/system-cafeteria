@@ -9,9 +9,9 @@ import { gitStores } from "@/Api/VaultApi";
 import { useEffect, useState } from "react";
 
 const SalesItemGroups = () => {
-  const [dataStors, setDataStors] = useState<object>();
+  const [dataStors, setDataStors] = useState<any>();
   const handelButton = () => {
-    console.log("click me");
+    console.log("click me" , dataStors?.data);
   };
 
   const { user } = gitStores();
@@ -98,7 +98,7 @@ const SalesItemGroups = () => {
         </div>
       </div>
       <div className="my-4 py-6 text-center font-bold text-2xl rounded-[10px] bg-200 text-100">
-        اجمالى عدد المخازن: {dataStors?.meta?.total}
+        اجمالى عدد المخازن: {dataStors?.meta && dataStors?.meta?.total}
       </div>
       <BodyTable dataTable={dataStors} />
     </Layout>

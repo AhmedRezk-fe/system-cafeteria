@@ -70,9 +70,9 @@ const SalesItemGroups = () => {
             itemAction="add"
           >
             <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M11.05 3.00002L4.20829 10.2417C3.94996 10.5167 3.69996 11.0584 3.64996 11.4334L3.34162 14.1333C3.23329 15.1083 3.93329 15.775 4.89996 15.6084L7.58329 15.15C7.95829 15.0834 8.48329 14.8084 8.74162 14.525L15.5833 7.28335C16.7666 6.03335 17.3 4.60835 15.4583 2.86668C13.625 1.14168 12.2333 1.75002 11.05 3.00002Z" stroke="white" stroke-width="1.2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
-              <path d="M9.9082 4.2085C10.2665 6.5085 12.1332 8.26683 14.4499 8.50016" stroke="white" stroke-width="1.2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
-              <path d="M2.5 18.3335H17.5" stroke="white" stroke-width="1.2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+              <path d="M11.05 3.00002L4.20829 10.2417C3.94996 10.5167 3.69996 11.0584 3.64996 11.4334L3.34162 14.1333C3.23329 15.1083 3.93329 15.775 4.89996 15.6084L7.58329 15.15C7.95829 15.0834 8.48329 14.8084 8.74162 14.525L15.5833 7.28335C16.7666 6.03335 17.3 4.60835 15.4583 2.86668C13.625 1.14168 12.2333 1.75002 11.05 3.00002Z" stroke="white" strokeWidth="1.2" stroke-miterlimit="10" strokeLinecap="round" strokeLinejoin="round" />
+              <path d="M9.9082 4.2085C10.2665 6.5085 12.1332 8.26683 14.4499 8.50016" stroke="white" strokeWidth="1.2" stroke-miterlimit="10" strokeLinecap="round" strokeLinejoin="round" />
+              <path d="M2.5 18.3335H17.5" stroke="white" strokeWidth="1.2" stroke-miterlimit="10" strokeLinecap="round" strokeLinejoin="round" />
             </svg>
           </Button>
         </div>
@@ -91,11 +91,11 @@ const SalesItemGroups = () => {
         <div className="flex items-center h-[105px] w-[550px] p-4">
           <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
             <circle opacity="0.1" cx="24" cy="24" r="24" fill="#3D9635" />
-            <path d="M22.7516 28.8604V30.8904C22.7516 32.6104 21.1516 34.0004 19.1816 34.0004C17.2116 34.0004 15.6016 32.6104 15.6016 30.8904V28.8604C15.6016 30.5804 17.2016 31.8004 19.1816 31.8004C21.1516 31.8004 22.7516 30.5704 22.7516 28.8604Z" stroke="#3D9635" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-            <path d="M22.7498 26.1097C22.7498 26.6097 22.6098 27.0697 22.3698 27.4697C21.7798 28.4397 20.5698 29.0497 19.1698 29.0497C17.7698 29.0497 16.5598 28.4297 15.9698 27.4697C15.7298 27.0697 15.5898 26.6097 15.5898 26.1097C15.5898 25.2497 15.9898 24.4797 16.6298 23.9197C17.2798 23.3497 18.1698 23.0098 19.1598 23.0098C20.1498 23.0098 21.0398 23.3597 21.6898 23.9197C22.3498 24.4697 22.7498 25.2497 22.7498 26.1097Z" stroke="#3D9635" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-            <path d="M22.7516 26.11V28.86C22.7516 30.58 21.1516 31.8 19.1816 31.8C17.2116 31.8 15.6016 30.57 15.6016 28.86V26.11C15.6016 24.39 17.2016 23 19.1816 23C20.1716 23 21.0616 23.35 21.7116 23.91C22.3516 24.47 22.7516 25.25 22.7516 26.11Z" stroke="#3D9635" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-            <path d="M34.0002 22.9702V25.0302C34.0002 25.5802 33.5602 26.0302 33.0002 26.0502H31.0402C29.9602 26.0502 28.9702 25.2602 28.8802 24.1802C28.8202 23.5502 29.0602 22.9602 29.4802 22.5502C29.8502 22.1702 30.3602 21.9502 30.9202 21.9502H33.0002C33.5602 21.9702 34.0002 22.4202 34.0002 22.9702Z" stroke="#3D9635" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-            <path d="M14 22.5V20.5C14 17.78 15.64 15.88 18.19 15.56C18.45 15.52 18.72 15.5 19 15.5H28C28.26 15.5 28.51 15.51 28.75 15.55C31.33 15.85 33 17.76 33 20.5V21.95H30.92C30.36 21.95 29.85 22.17 29.48 22.55C29.06 22.96 28.82 23.55 28.88 24.18C28.97 25.26 29.96 26.05 31.04 26.05H33V27.5C33 30.5 31 32.5 28 32.5H25.5" stroke="#3D9635" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M22.7516 28.8604V30.8904C22.7516 32.6104 21.1516 34.0004 19.1816 34.0004C17.2116 34.0004 15.6016 32.6104 15.6016 30.8904V28.8604C15.6016 30.5804 17.2016 31.8004 19.1816 31.8004C21.1516 31.8004 22.7516 30.5704 22.7516 28.8604Z" stroke="#3D9635" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+            <path d="M22.7498 26.1097C22.7498 26.6097 22.6098 27.0697 22.3698 27.4697C21.7798 28.4397 20.5698 29.0497 19.1698 29.0497C17.7698 29.0497 16.5598 28.4297 15.9698 27.4697C15.7298 27.0697 15.5898 26.6097 15.5898 26.1097C15.5898 25.2497 15.9898 24.4797 16.6298 23.9197C17.2798 23.3497 18.1698 23.0098 19.1598 23.0098C20.1498 23.0098 21.0398 23.3597 21.6898 23.9197C22.3498 24.4697 22.7498 25.2497 22.7498 26.1097Z" stroke="#3D9635" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+            <path d="M22.7516 26.11V28.86C22.7516 30.58 21.1516 31.8 19.1816 31.8C17.2116 31.8 15.6016 30.57 15.6016 28.86V26.11C15.6016 24.39 17.2016 23 19.1816 23C20.1716 23 21.0616 23.35 21.7116 23.91C22.3516 24.47 22.7516 25.25 22.7516 26.11Z" stroke="#3D9635" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+            <path d="M34.0002 22.9702V25.0302C34.0002 25.5802 33.5602 26.0302 33.0002 26.0502H31.0402C29.9602 26.0502 28.9702 25.2602 28.8802 24.1802C28.8202 23.5502 29.0602 22.9602 29.4802 22.5502C29.8502 22.1702 30.3602 21.9502 30.9202 21.9502H33.0002C33.5602 21.9702 34.0002 22.4202 34.0002 22.9702Z" stroke="#3D9635" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+            <path d="M14 22.5V20.5C14 17.78 15.64 15.88 18.19 15.56C18.45 15.52 18.72 15.5 19 15.5H28C28.26 15.5 28.51 15.51 28.75 15.55C31.33 15.85 33 17.76 33 20.5V21.95H30.92C30.36 21.95 29.85 22.17 29.48 22.55C29.06 22.96 28.82 23.55 28.88 24.18C28.97 25.26 29.96 26.05 31.04 26.05H33V27.5C33 30.5 31 32.5 28 32.5H25.5" stroke="#3D9635" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
           </svg>
 
           <div className="ms-6 leading-10">
@@ -108,9 +108,9 @@ const SalesItemGroups = () => {
         <div className="flex items-center h-[105px] w-[550px] p-4">
           <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
             <circle opacity="0.1" cx="24" cy="24" r="24" fill="#1664B8" />
-            <path d="M31.5 22.2202V31.0002C31.5 33.0002 31 34.0002 28.5 34.0002H19.5C17 34.0002 16.5 33.0002 16.5 31.0002V22.2202" stroke="#1664B8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-            <path d="M17 14H31C33 14 34 15 34 17V19C34 21 33 22 31 22H17C15 22 14 21 14 19V17C14 15 15 14 17 14Z" stroke="#1664B8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-            <path d="M22.1797 26H25.8197" stroke="#1664B8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M31.5 22.2202V31.0002C31.5 33.0002 31 34.0002 28.5 34.0002H19.5C17 34.0002 16.5 33.0002 16.5 31.0002V22.2202" stroke="#1664B8" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+            <path d="M17 14H31C33 14 34 15 34 17V19C34 21 33 22 31 22H17C15 22 14 21 14 19V17C14 15 15 14 17 14Z" stroke="#1664B8" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+            <path d="M22.1797 26H25.8197" stroke="#1664B8" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
           </svg>
 
           <div className="ms-6 leading-10">

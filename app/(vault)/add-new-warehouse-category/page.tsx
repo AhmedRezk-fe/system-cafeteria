@@ -54,11 +54,11 @@ const NewVault = () => {
           <label htmlFor="dropzone-file" className="flex flex-col items-center justify-center w-full h-64 border-2 border-gray-300 border-dashed rounded-lg cursor-pointer bg-gray-50 dark:hover:bg-bray-800 dark:bg-gray-700 hover:bg-gray-100 dark:border-gray-600 dark:hover:border-gray-500 dark:hover:bg-gray-600">
             <div className="flex flex-col items-center justify-center pt-5 pb-6">
               <svg width="62" height="62" viewBox="0 0 62 62" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M23.2497 25.8333C26.1031 25.8333 28.4163 23.5201 28.4163 20.6667C28.4163 17.8132 26.1031 15.5 23.2497 15.5C20.3962 15.5 18.083 17.8132 18.083 20.6667C18.083 23.5201 20.3962 25.8333 23.2497 25.8333Z" stroke="#1664B8" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" />
-                <path d="M33.5837 5.1665H23.2503C10.3337 5.1665 5.16699 10.3332 5.16699 23.2498V38.7498C5.16699 51.6665 10.3337 56.8332 23.2503 56.8332H38.7503C51.667 56.8332 56.8337 51.6665 56.8337 38.7498V25.8332" stroke="#1664B8" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" />
-                <path d="M40.6875 12.9165H54.8958" stroke="#1664B8" stroke-width="3.5" stroke-linecap="round" />
-                <path d="M47.792 20.0208V5.8125" stroke="#1664B8" stroke-width="3.5" stroke-linecap="round" />
-                <path d="M6.89746 48.9543L19.6333 40.4034C21.6741 39.0343 24.6191 39.1893 26.4533 40.7651L27.3058 41.5143C29.3208 43.2451 32.5758 43.2451 34.5908 41.5143L45.3375 32.2918C47.3525 30.5609 50.6075 30.5609 52.6225 32.2918L56.8333 35.9084" stroke="#1664B8" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M23.2497 25.8333C26.1031 25.8333 28.4163 23.5201 28.4163 20.6667C28.4163 17.8132 26.1031 15.5 23.2497 15.5C20.3962 15.5 18.083 17.8132 18.083 20.6667C18.083 23.5201 20.3962 25.8333 23.2497 25.8333Z" stroke="#1664B8" strokeWidth="3.5" strokeLinecap="round" strokeLinejoin="round" />
+                <path d="M33.5837 5.1665H23.2503C10.3337 5.1665 5.16699 10.3332 5.16699 23.2498V38.7498C5.16699 51.6665 10.3337 56.8332 23.2503 56.8332H38.7503C51.667 56.8332 56.8337 51.6665 56.8337 38.7498V25.8332" stroke="#1664B8" strokeWidth="3.5" strokeLinecap="round" strokeLinejoin="round" />
+                <path d="M40.6875 12.9165H54.8958" stroke="#1664B8" strokeWidth="3.5" strokeLinecap="round" />
+                <path d="M47.792 20.0208V5.8125" stroke="#1664B8" strokeWidth="3.5" strokeLinecap="round" />
+                <path d="M6.89746 48.9543L19.6333 40.4034C21.6741 39.0343 24.6191 39.1893 26.4533 40.7651L27.3058 41.5143C29.3208 43.2451 32.5758 43.2451 34.5908 41.5143L45.3375 32.2918C47.3525 30.5609 50.6075 30.5609 52.6225 32.2918L56.8333 35.9084" stroke="#1664B8" strokeWidth="3.5" strokeLinecap="round" strokeLinejoin="round" />
               </svg>
               <p className="mb-2 text-lg text-gray-500 dark:text-gray-400">اسحب الصورة واسقطها هنا او قم بتحميلها <span className="font-semibold">من هنا</span></p>
               <p className="text-sm text-gray-500 dark:text-gray-400">يفضل ان تكون الصورة بصيفة  JPG & JPEG & PNG والا يزيد الحجم عن 2 MB</p>

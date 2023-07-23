@@ -8,7 +8,7 @@ import React, {
 } from "react";
 
 type TableProps = {
-  dataTable?: object;
+  dataTable?: any;
 };
 
 const BodyTable: FunctionComponent<TableProps> = ({ dataTable }) => {
@@ -36,7 +36,7 @@ const BodyTable: FunctionComponent<TableProps> = ({ dataTable }) => {
     },
   ];
 
-  const [dataTableComponent, setDataTableComponent] = useState<object>(iniData);
+  const [dataTableComponent, setDataTableComponent] = useState<any>(iniData);
   useEffect(() => {
     if (dataTable) {
       setDataTableComponent(dataTable);
@@ -60,7 +60,7 @@ const deleteStore = (id:number) => {
         </tr>
       </thead>
       <tbody>
-        {dataTableComponent?.data?.map((itemTR) => {
+        {dataTableComponent?.data?.map((itemTR:any) => {
           return (
             <tr key={itemTR.id}>
               <td>{itemTR.id}</td>

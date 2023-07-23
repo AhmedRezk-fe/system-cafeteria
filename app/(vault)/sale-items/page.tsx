@@ -33,8 +33,8 @@ const SalesItemGroups = () => {
             itemAction='add'
           >
             <svg width="26" height="24" viewBox="0 0 26 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M6.67578 12H19.437" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-              <path d="M13.0557 18V6" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+              <path d="M6.67578 12H19.437" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+              <path d="M13.0557 18V6" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
             </svg>
           </Button>
         </div>
