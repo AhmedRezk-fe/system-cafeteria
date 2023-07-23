@@ -2,7 +2,7 @@
 import classNames from "classnames";
 import React, { useState, useMemo, Fragment } from "react";
 import { useRouter } from "next/navigation";
-// import Link from 'next/link';
+import Link from 'next/link';
 
 // Image
 import Logo from "../image/Cisco-logo.png";
@@ -23,7 +23,6 @@ import Units from "../image/Units";
 import Settings from "../image/Settings";
 import Notification from "../image/Notification";
 import { FaAngleUp } from "react-icons/fa6";
-import Link from "next/link";
 
 interface Menu {
   id: number;
@@ -33,6 +32,7 @@ interface Menu {
 interface MenuItem {
   id: number;
   name: string;
+  nameTap: string;
   menus: string[];
   route: string;
   icon: any;
@@ -43,84 +43,112 @@ const menuItems: MenuItem[] = [
   {
     id: 1,
     name: "navItem1",
-    route: "Home1",
+    nameTap: "مخازن",
+    route: "stores",
     icon: <Cash />,
     menus: ["dashboard", "realtime", "events"],
   },
   {
     id: 2,
     name: "navItem2",
-    route: "Home2",
+    nameTap: "اضافة مخزن جديد",
+    route: "new-vault",
     icon: <Bills />,
     menus: ["dashboard", "realtime", "events"],
   },
   {
     id: 3,
     name: "navItem3",
-    route: "Home3",
+    nameTap: "بيانات المخزن",
+    route: "store-data",
     icon: <Storage />,
     menus: ["dashboard", "realtime", "events"],
   },
   {
     id: 4,
     name: "navItem4",
-    route: "Home4",
+    nameTap: "أقسام الاصناف",
+    route: "items-sections",
     icon: <Requests />,
     menus: ["dashboard", "realtime", "events"],
   },
   {
     id: 5,
     name: "navItem5",
-    route: "Home5",
+    nameTap: "اضافة قسم اصناف جديدة",
+    route: "add-new-items-section",
     icon: <Client />,
     menus: ["dashboard", "realtime", "events"],
   },
   {
     id: 6,
     name: "navItem6",
-    route: "Home6",
+    nameTap: "أصناف المخازن",
+    route: "warehouse-items",
     icon: <Client />,
     menus: ["dashboard", "realtime", "events"],
   },
   {
     id: 7,
     name: "navItem7",
-    route: "Home7",
+    nameTap: "اضافة صنف مخازن جديد",
+    route: "add-new-warehouse-category",
     icon: <Report />,
     menus: ["dashboard", "realtime", "events"],
   },
   {
     id: 8,
     name: "navItem8",
-    route: "Home8",
+    nameTap: "تفاصيل حركة الصنف",
+    route: "item-transaction-details",
     icon: <Ranches />,
     menus: ["dashboard", "realtime", "events"],
   },
   {
     id: 9,
     name: "navItem9",
-    route: "Home9",
+    nameTap: "وحدات القياس",
+    route: "measurement-units",
     icon: <Employe />,
     menus: ["dashboard", "realtime", "events"],
   },
   {
     id: 10,
     name: "navItem10",
-    route: "Home10",
+    nameTap: "اضافة وحدة جديدة",
+    route: "add-new-unit",
     icon: <Units />,
     menus: ["dashboard", "realtime", "events"],
   },
   {
     id: 11,
     name: "navItem11",
-    route: "Home12",
+    nameTap: "مجموعات أصناف البيع",
+    route: "sales-item-groups",
     icon: <Settings />,
     menus: ["dashboard", "realtime", "events"],
   },
   {
     id: 12,
     name: "navItem12",
-    route: "Home13",
+    nameTap: "اضافة مجموعة أصناف جديدة",
+    route: "add-new-group-items",
+    icon: <Notification />,
+    menus: ["dashboard", "realtime", "events"],
+  },
+  {
+    id: 13,
+    name: "navItem13",
+    nameTap: " أصناف البيع",
+    route: "sale-items",
+    icon: <Notification />,
+    menus: ["dashboard", "realtime", "events"],
+  },
+  {
+    id: 14,
+    name: "navItem14",
+    nameTap: "اضافة صنف بيع جديد",
+    route: "add-new-item-for-sale",
     icon: <Notification />,
     menus: ["dashboard", "realtime", "events"],
   },
@@ -247,7 +275,9 @@ const Sidebar = ({
                             "text-xl font-medium text-text-light flex items-center justify-between w-full px-4 flex-row"
                           )}
                         >
-                          {menu.route}
+                          <Link href={menu.route}>
+                            {menu.nameTap}
+                          </Link>
                           <span
                             className={`transition-all ${
                               nameCollapse === menu?.name
@@ -268,7 +298,7 @@ const Sidebar = ({
                     navBar ? "absolute w-full bg-200 hidden" : ""
                   } ${nameCollapse === menu?.name ? "block" : "hidden"}`}
                 >
-                  {menu.menus.map((item,i) => {
+                  {/* {menu.menus.map((item,i) => {
                     return (
                       <li className="py-1 text-lg" key={i}>
                         <Link className="text-400" href={"/"}>
@@ -276,7 +306,7 @@ const Sidebar = ({
                         </Link>
                       </li>
                     );
-                  })}
+                  })} */}
                 </ul>
               </div>
             );
