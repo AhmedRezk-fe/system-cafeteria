@@ -46,7 +46,7 @@ const NewVault = () => {
 
         <div className="my-2">
           <label htmlFor="message" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">وصف الصنف</label>
-          <textarea id="message" rows="6" cols='6' className="block p-2.5 w-full max-h-[200px] text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 outline-none" placeholder="ادخل وصف الصنف"></textarea>
+          <textarea id="message"  className="block p-2.5 w-full max-h-[200px] text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 outline-none" placeholder="ادخل وصف الصنف"></textarea>
         </div>
 
         <div className="flex items-center flex-col justify-center w-full">
